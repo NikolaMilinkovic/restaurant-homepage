@@ -1,0 +1,27 @@
+{
+  "name": "restaurant-homepage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikolaMilinkovic/restaurant-homepage.git"
+  },
+  "author": "Nikola Milinkovic | nikolamilinkovic221@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NikolaMilinkovic/restaurant-homepage/issues"
+  },
+  "homepage": "https://github.com/NikolaMilinkovic/restaurant-homepage#readme",
+  "devDependencies": {
+    "css-loader": "^6.9.0",
+    "style-loader": "^3.3.4",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}

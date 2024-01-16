@@ -1,0 +1,14 @@
+@import '../../src/index.css';
+
+.homeDiv{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    background-image: url('../../public/img/landing-page-dish.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: calc(100vh - var(--navbar-height));
+    background-color: blue;
+    overflow: hidden;
+}

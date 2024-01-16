@@ -1,0 +1,33 @@
+@import '../../src/index.css';
+
+ul{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.nav{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: var(--navbar-height);
+    width: 100vw;
+    background-color: rgba(33, 33, 33, 0.8);
+}
+.li{
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+    user-select: none;
+    font-size: var(--navbar-font-size);
+}
+.li:hover{
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+    text-decoration-thickness: 0.1rem;
+    text-decoration-color: lightgray;
+    background-color: black;
+}
+.li.active{
+    transform: scale(0.95);
+}
