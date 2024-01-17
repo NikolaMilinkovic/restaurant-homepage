@@ -1,14 +1,15 @@
 import './styles/navbar.css';
-import { renderHome } from './home.js'
-import { renderMenu } from './menu.js'
-import { renderContact } from './contact.js'
+import renderHome from './home';
+import renderMenu from './menu';
+import renderContact from './contact';
+
 const content = document.getElementById('content');
 
 // Main function for rendering the Navbar
 const renderNavbar = () => {
     const nav = createNav();
     const navElements = appendNavElements();
-    
+
     content.appendChild(nav);
     nav.appendChild(createUl(navElements));
     renderHome();
@@ -17,7 +18,7 @@ const renderNavbar = () => {
 
 // Function for creating the Navbar container
 const createNav = () => {
-    const navbar = document.createElement('div');
+    const navbar = document.createElement('nav');
     navbar.setAttribute('id', 'navbar');
     navbar.setAttribute('class', 'nav');
     return navbar;
@@ -27,50 +28,40 @@ const createNav = () => {
 // Appends each li element
 const createUl = (liList) => {
     const ul = document.createElement('ul');
-    liList.forEach(li => {
+    liList.forEach((li) => {
         ul.appendChild(li);
     });
     return ul;
-}
+};
 
 // Function for creating each navbar element and returning it as an array
 // Used to display each li element in an ul
 const appendNavElements = () => {
-    
-    const elNames = ["Home","Menu","Contact"];
+    const elNames = ['Home', 'Menu', 'Contact'];
     const elDisplayMethod = [renderHome, renderMenu, renderContact];
     const navElements = [];
 
 
-    for(let i=0; i<elNames.length ;i++){
-
+    for (let i = 0; i < elNames.length; i++) {
         const element = document.createElement('li');
         element.setAttribute('class', 'li');
         element.innerHTML = elNames[i];
 
-        element.addEventListener('click', function (){
+        element.addEventListener('click', () => {
             elDisplayMethod[i]();
 
             elClickAnimation(element);
-        })
+        });
         navElements.push(element);
     }
     return navElements;
-}
+};
 
 const elClickAnimation = (element) => {
     element.classList.add('active');
     setTimeout(() => {
         element.classList.remove('active');
     }, 150);
-}
+};
 
-
-function displayMenu(){
-    console.log("Display Menu clicked");
-}
-function displayContact(){
-    console.log("Display Contact clicked");
-}
-
-export { renderNavbar };
+export default renderNavbar;

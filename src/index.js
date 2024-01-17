@@ -1,4 +1,4 @@
-import { renderNavbar } from '../components/navbar.js';
+import renderNavbar from '../components/navbar';
 import './index.css';
 
 renderNavbar();

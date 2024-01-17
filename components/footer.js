@@ -1,22 +1,19 @@
 import './styles/footer.css';
-const content = document.getElementById('content');
 
-// Handles rendering of the Contact page content
-const renderContact = () => {
-    removeContent();
-    content.appendChild(createContactDiv());
-}
-// Creates div inside which Contact page content will be stored
-const createContactDiv = () => {
-    const contactDiv = document.createElement('div');
-    contactDiv.setAttribute('class', 'contactDiv');
 
-    return contactDiv;
-}
-// Removes the last child of the content element
-const removeContent = () => {
-    if (content.childElementCount > 1)
-        content.removeChild(content.lastChild);
-}
+// Handles rendering of the Footer component
+const renderFooter = () => {
+    const content = document.getElementById('content');
+    const lastElement = content.lastElementChild;
 
-export { renderContact };
+    lastElement.appendChild(createFooter());
+};
+// Creates div inside which Footer page content will be stored
+const createFooter = () => {
+    const footer = document.createElement('footer');
+    footer.setAttribute('class', 'footer-container');
+
+    return footer;
+};
+
+export default renderFooter;

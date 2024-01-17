@@ -1,9 +1,14 @@
 @import '../../src/index.css';
 
+
+nav{
+    position: absolute;
+    z-index: 1;
+}
 ul{
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 2rem;
 }
 .nav{
     align-items: center;
@@ -11,7 +16,7 @@ ul{
     display: flex;
     height: var(--navbar-height);
     width: 100vw;
-    background-color: rgba(33, 33, 33, 0.8);
+    background-color: rgba(33, 33, 33, 0.7);
 }
 .li{
     color: white;

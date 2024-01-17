@@ -48,4 +48,5 @@ table {
 :root{
     --navbar-height: 10vh;
     --navbar-font-size: clamp(18px, 2.5vw, 28px);
+    --footer-height: 15vh;
 }

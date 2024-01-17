@@ -1,22 +1,22 @@
 import './styles/menu.css';
-const content = document.getElementById('content');
+import renderFooter from './footer';
+import { removeContent, elementCreator, attributeCreator } from './functions';
 
 // Handles rendering of the Menu page content
 const renderMenu = () => {
     removeContent();
+    const content = document.getElementById('content');
     content.appendChild(createMenuDiv());
-}
+    renderFooter();
+};
 // Creates div inside which Menu page content will be stored
 const createMenuDiv = () => {
     const MenuDiv = document.createElement('div');
-    MenuDiv.setAttribute('class', 'menuDiv');
+    MenuDiv.setAttribute('class', 'menu-div');
 
     return MenuDiv;
-}
-// Removes the last child of the content element
-const removeContent = () => {
-    if (content.childElementCount > 1)
-        content.removeChild(content.lastChild);
-}
+};
+// Retrieves current content
+const getContent = () => document.getElementById('content');
 
-export { renderMenu };
+export default renderMenu;
