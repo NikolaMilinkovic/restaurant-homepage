@@ -1,6 +1,24 @@
 .footer-container{
+    display: flex;
     width: 100%;
     height: var(--footer-height);
     grid-column: span 2;
     background-color: rgba(33, 33, 33, 1);
+    gap: 5vw;
+}
+.footer-element{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    text-align: center;
+}
+.linked-element{
+    font-weight: bold;
+    margin-bottom: 0.5rem;
 }

@@ -3,7 +3,8 @@
 
 nav{
     position: absolute;
-    z-index: 1;
+    box-sizing: border-box;
+    z-index: 2;
 }
 ul{
     display: flex;

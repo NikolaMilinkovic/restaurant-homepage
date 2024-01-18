@@ -1,9 +1,48 @@
 @import '../../src/index.css';
 
-.contactDiv{
+.contact-div{
     display: flex;
+    flex-direction: column;
     width: 100vw;
-    height: calc(100vh - var(--navbar-height));
+    height: 100vh;
     background-color: lime;
     overflow: hidden;
 }
+.content-container{
+    width: 100vw;
+    height: calc(100vh - var(--navbar-height));
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-sizing: border-box;
+    padding: 5vh;
+    padding-top: calc(5vh + var(--navbar-height));
+}
+.map-container{
+    background-color: yellow;
+    order: 0;
+}
+.info-container{
+    background-color: red;
+    order: 0;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .content-container{
+      grid-template-columns: 1fr;
+    }
+    .info-container{
+        order: -1;
+    }
+  }
+  @media screen and (min-width: 800px) {
+    .content-container{
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media screen and (min-width: 1500px) {
+    .content-container{
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }

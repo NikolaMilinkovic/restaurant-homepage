@@ -13,4 +13,16 @@ const elementCreator = (elementType, text) => {
 // Attribute creator (element, type of attribute, name)
 const attributeCreator = (element, attribute, attributeName) => element.setAttribute(`${attribute}`, `${attributeName}`);
 
-export { removeContent, elementCreator, attributeCreator };
+// Creates an element with a link
+// Function to create an element with a link
+const elementWithLink = (text, link) => {
+    const linkElement = elementCreator('a', text);
+    attributeCreator(linkElement, 'href', link);
+    attributeCreator(linkElement, 'target', '_blank');
+    attributeCreator(linkElement, 'style', 'text-decoration: none; color: inherit;');
+    return linkElement;
+};
+
+export {
+    removeContent, elementCreator, attributeCreator, elementWithLink,
+};

@@ -155,6 +155,7 @@ img{
   touch-action: manipulation;
   will-change: transform;
   max-width: 20vw;
+  min-height: 320px;
 }
 
 .card:disabled {

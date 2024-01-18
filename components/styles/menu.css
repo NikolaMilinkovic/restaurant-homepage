@@ -1,8 +1,75 @@
 @import '../../src/index.css';
 
-.menu-div{
+.menu-container{
     width: 100vw;
-    height: calc(100vh - var(--navbar-height));
-    background-color: red;
-    overflow: hidden;
+    height: 100vh;
+    background-image: url('../../public/img/pizza-background-resized.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    overflow-y: scroll;
 }
+.menu-content{
+    /* height: 150vh; */
+    padding: 10vw;
+    padding-top: calc(5% + var(--navbar-height));
+    box-sizing: border-box;
+}
+.menu-cards-container{
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(11,11,11,0.5);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3vw;
+    padding: 3vw;
+}
+.card{
+    background-color: rgba(11,11,11,0.5);
+    z-index: 0;
+}
+.card-img{
+
+}
+.card-header{
+    font-size: 18px;
+    margin-top: 1.5rem;
+    margin-bottom: 0.7rem;
+}
+.card-para{
+    font-size: 14px;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .menu-cards-container{
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+    .card{
+      max-width: 80vw;
+    }
+  }
+  @media screen and (min-width: 800px) {
+    .menu-cards-container{
+      grid-template-columns: 1fr 1fr;
+      height: auto;
+    }
+    .card{
+      max-width: 40vw;
+    }
+  }
+  @media screen and (min-width: 1500px) {
+    .menu-cards-container{
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      height: auto;
+    }
+    .card{
+        background-color: rgba(11,11,11,0.5);
+        z-index: 0;
+        min-height: 320px;
+    }
+  }
