@@ -12,6 +12,8 @@ const renderNavbar = () => {
 
     content.appendChild(nav);
     nav.appendChild(createUl(navElements));
+
+    document.getElementById('nav-ul').firstChild.classList.add('active');
     renderHome();
 };
 
@@ -28,6 +30,7 @@ const createNav = () => {
 // Appends each li element
 const createUl = (liList) => {
     const ul = document.createElement('ul');
+    ul.id = 'nav-ul';
     liList.forEach((li) => {
         ul.appendChild(li);
     });
@@ -50,18 +53,27 @@ const appendNavElements = () => {
         element.addEventListener('click', () => {
             elDisplayMethod[i]();
 
+            removeActiveClass();
+            element.classList.add('active');
             elClickAnimation(element);
         });
         navElements.push(element);
     }
     return navElements;
 };
-
+// Removes all active class from li elements
+const removeActiveClass = () => {
+    const liElList = document.querySelectorAll('li');
+    liElList.forEach((li) => {
+        li.classList.remove('active');
+    });
+};
+// Handles click animation on li element
 const elClickAnimation = (element) => {
-    element.classList.add('active');
+    element.classList.add('click-animation');
     setTimeout(() => {
-        element.classList.remove('active');
-    }, 150);
+        element.classList.remove('click-animation');
+    }, 350);
 };
 
 export default renderNavbar;

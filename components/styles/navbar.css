@@ -32,8 +32,13 @@ ul{
     text-underline-offset: 0.3rem;
     text-decoration-thickness: 0.1rem;
     text-decoration-color: lightgray;
-    background-color: black;
 }
-.li.active{
+.li.click-animation{
     transform: scale(0.95);
+}
+.active{
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+    text-decoration-thickness: 0.1rem;
+    text-decoration-color: lightgray;
 }

@@ -2,16 +2,14 @@
 
 .menu-container{
     width: 100vw;
-    height: 100vh;
     background-image: url('../../public/img/pizza-background-resized.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     box-sizing: border-box;
-    overflow-y: scroll;
+    background-attachment: fixed;
 }
 .menu-content{
-    /* height: 150vh; */
     padding: 10vw;
     padding-top: calc(5% + var(--navbar-height));
     box-sizing: border-box;
@@ -29,9 +27,6 @@
 .card{
     background-color: rgba(11,11,11,0.5);
     z-index: 0;
-}
-.card-img{
-
 }
 .card-header{
     font-size: 18px;

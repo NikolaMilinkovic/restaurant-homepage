@@ -5,7 +5,6 @@
     grid-template-columns: 1fr 2fr;
     width: 100vw;
     height: 100vh;
-    overflow-x: hidden;
 }
 .grid-div-1{
     display: flex;
@@ -99,6 +98,8 @@
 }
 /* \BUTTON */
 
+
+/* CARD SECTION */
 .card{
   display: flex;
   flex-direction: column;
@@ -173,7 +174,7 @@ img{
   box-shadow: none;
   transform: translateY(0);
 }
-
+/* \CARD SECTION */
 
 
 

@@ -92,12 +92,6 @@ const populateCards = (cards) => {
         'Tasty Pizza',
         'Curated wine selection',
     ];
-    // const texts = [
-    //     'Culinary excellence by top chefs.',
-    //     'Diverse flavors, endless choices.',
-    //     'Irresistible pizza perfection.',
-    //     'Exceptional wines, perfect pairings.',
-    // ];
     const texts = [
         'Because life is too short to eat boring food. Get ready for a taste party in your mouth!',
         'Variety is the spice of life, and our menu is the spice rack. Eat like nobody\'s watching!',
@@ -106,7 +100,9 @@ const populateCards = (cards) => {
     ];
 
 
-
+    // Goes through each card in cards array
+    // Takes the values from given arrays
+    // Sets those values for each card
     for (let i = 0; i < cards.length; i++) {
         const imgElement = document.createElement('img');
         imgElement.setAttribute('src', icons[i]);
@@ -117,13 +113,14 @@ const populateCards = (cards) => {
         attributeCreator(text, 'class', 'card-text');
 
 
-
+        // Appends elements to card
         cards[i].appendChild(imgElement);
         cards[i].appendChild(h2);
         cards[i].appendChild(text);
     }
     return cards;
 };
+// Appends cards from the cards array to the parent element
 const appendCards = (cards) => {
     cards.forEach((card) => {
         const gridDiv_3 = document.getElementById('card-container');

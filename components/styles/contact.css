@@ -4,28 +4,124 @@
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: 100vh;
-    background-color: lime;
+    height: auto;
     overflow: hidden;
+    overflow-y: auto;
+    background-image: url('../../public/img/contact-page-background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .content-container{
     width: 100vw;
-    height: calc(100vh - var(--navbar-height));
     display: grid;
     grid-template-columns: 1fr 1fr;
     box-sizing: border-box;
     padding: 5vh;
     padding-top: calc(5vh + var(--navbar-height));
 }
-.map-container{
-    background-color: yellow;
-    order: 0;
+
+/* GOOGLE MAP SECTION */
+.map-section{
+  background-color: rgba(11,11,11,0.5);
+  order: 0;
+  box-sizing: border-box;
+  padding: 5vh;
+  border-right: 2px solid #2C2C2C;
 }
-.info-container{
-    background-color: red;
-    order: 0;
+.iframe-container{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(11,11,11,0.5);
+  border: 2px solid #2C2C2C;
+  box-sizing: border-box;
+}
+/* \GOOGLE MAP SECTION */
+
+
+/* FORM */
+.info-section{
+  background-color: rgba(11,11,11,0.5);
+  order: -1;
+  box-sizing: border-box;
+  padding: 5vh;
+}
+.input-el-container{
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-weight: bold;
+  font-size: clamp(18px, 2.5vw, 26px);
+  margin: 0 5vh;
+  margin-bottom: 1rem;
+}
+.input-el{
+  font-size: 18px;
+  background-color: rgba(11,11,11,0.7);
+  color: #fff;
+  border: 2px solid #2C2C2C;
+  padding: 1rem;
+}
+input::placeholder, textarea::placeholder {
+  color: #636262;
+}
+input, textarea{
+  margin-top: 0.5rem;
+}
+.form-btn-container{
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+/* \FORM */
+
+
+/* BUTTON */
+.form-btn {
+  appearance: none;
+  background-color: rgba(11,11,11,0.7);
+  border: 2px solid #2C2C2C;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0 5vh;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 160px;
+  will-change: transform;
 }
 
+.form-btn:disabled {
+  pointer-events: none;
+}
+
+.form-btn:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.form-btn:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+/* \BUTTON */
 
 
 @media screen and (max-width: 800px) {
@@ -35,14 +131,12 @@
     .info-container{
         order: -1;
     }
-  }
+}
   @media screen and (min-width: 800px) {
     .content-container{
       grid-template-columns: 1fr 1fr;
     }
+    .info-container{
+      order: -1;
   }
-  @media screen and (min-width: 1500px) {
-    .content-container{
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-  }
+}

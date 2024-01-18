@@ -35,7 +35,7 @@ const createMenuDiv = () => {
 
     return MenuDiv;
 };
-
+// Class & Method used for generating cards
 class Card {
     constructor(imgUrl, header, text) {
         this.imgUrl = imgUrl;
@@ -44,6 +44,7 @@ class Card {
         this.element = this.createCard();
     }
 
+    // Method for card creation
     createCard() {
         const cardElement = document.createElement('div');
         cardElement.classList.add('card');
@@ -66,14 +67,14 @@ class Card {
         return cardElement;
     }
 }
-
+// Handles appending an array of card objects to the parent element
 const cardAppender = (parent, cards) => {
     cards.forEach((card) => {
         parent.appendChild(card.element);
     });
 };
 
-
+// An array that contains all generated card objects for dispay
 const cards = [
     new Card('../public/img/food-icons/lasagna.png', 'Luscious Layers Delight', 'Layers of joy, cheese, and happiness. It\'s like a delicious opera in your mouth – an Italian masterpiece, no strings attached!'),
 
