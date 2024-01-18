@@ -81,10 +81,10 @@ const createInfoCards = () => {
 // Populates information cards
 const populateCards = (cards) => {
     const icons = [
-        '../public/img/card-1-white.png',
-        '../public/img/card-2-white.png',
-        '../public/img/card-3-white.png',
-        '../public/img/card-4-white.png',
+        '../dist/public/img/card-1-white.png',
+        '../dist/public/img/card-2-white.png',
+        '../dist/public/img/card-3-white.png',
+        '../dist/public/img/card-4-white.png',
     ];
     const headers = [
         'Top chefs',
