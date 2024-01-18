@@ -1,7 +1,6 @@
 import './styles/menu.css';
 import renderFooter from './footer';
 import { removeContent, elementCreator, attributeCreator } from './functions';
-import spaguettiImage from '../dist/public/img/food-icons/spaguetti.png';
 
 // Handles rendering of the Menu page content
 const renderMenu = () => {
@@ -91,7 +90,7 @@ const cards = [
 
     new Card('../dist/public/img/food-icons/spaguetti.png', 'Savory Serenade Spaghetti', 'Tangle with flavor in every forkful. Savory Serenade Spaghetti: a melody of taste in every twirl.'),
 
-    new Card(`${spaguettiImage}`, 'Sakura Bliss Sushi', 'Dive into Sakura Bliss Sushi: a symphony of fresh flavors and delicate rolls.'),
+    new Card('../dist/public/img/food-icons/sushi.png', 'Sakura Bliss Sushi', 'Dive into Sakura Bliss Sushi: a symphony of fresh flavors and delicate rolls.'),
 ];
 
 
